@@ -129,6 +129,7 @@ input[type=submit], input[type=button], button {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
+  font-family: "Catamaran";
 }
 
 /*
@@ -141,25 +142,77 @@ input[type=submit], input[type=button], button {
 |                                     MAIN                                     |
 ================================================================================
 */
+.content {
+  padding-top: 50px;
+}
+
+.tab {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #999;
+}
+.tab__item {
+  display: inline-block;
+  font-weight: 600;
+  color: #999;
+  font-size: 16px;
+  padding-right: 16px;
+}
+.tab__item_active {
+  color: #11b3eb;
+}
+.tab__item:hover {
+  color: #11b3eb;
+}
+
 .news {
   display: inline-block;
   max-width: 800px;
   margin-right: 49px;
 }
-.news__img {
-  float: left;
-}
-.news__post {
+
+.post {
+  height: 143px;
   clear: both;
   position: relative;
 }
-.news__view {
+.post__img {
+  padding-right: 21px;
+  padding-bottom: 20px;
+  float: left;
+}
+.post__date {
+  font-weight: 300;
+  padding-right: 4px;
+  border-right: 1px solid #999;
+  color: #999;
+  font-size: 13px;
+}
+.post__categories {
+  font-weight: 300;
+  color: #999;
+  font-size: 13px;
+}
+.post__title {
+  font-weight: 600;
+  padding: 7px 0 5px;
+  font-size: 21px;
+}
+.post__text {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 21px;
+}
+.post__view {
+  color: #999;
   position: absolute;
   right: 0;
 }
-
-.tab__item {
-  display: inline-block;
+.post__detail {
+  position: absolute;
+  bottom: 14px;
+  font-weight: 600;
+  color: #11b3eb;
 }
 
 .right-column {
@@ -168,9 +221,26 @@ input[type=submit], input[type=button], button {
   vertical-align: top;
 }
 
+.videos__title {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #999;
+  color: #11b3eb;
+}
+.videos__name {
+  padding-top: 13px;
+  font-size: 16px;
+  font-weight: 600;
+}
 .videos__slide {
   max-width: 203px;
   display: inline-block;
+}
+
+.banner {
+  width: 427px;
+  height: 128px;
+  position: relative;
 }
 
 /*
