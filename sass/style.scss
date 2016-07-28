@@ -1,5 +1,9 @@
 @import "reset";
 
+$main-color: #11b3eb;
+$fw-text: 300;
+$fw-title: 600;
+
 /*
 ================================================================================
 |                                     MAIN STYLE                               |
@@ -11,6 +15,7 @@
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
+  font-family: "Catamaran";
 }
 
 /*
@@ -24,25 +29,75 @@
 |                                     MAIN                                     |
 ================================================================================
 */
-
+.content {
+  padding-top: 50px;
+}
+.tab {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #999;
+  &__item {
+    display: inline-block;
+    font-weight: $fw-title;
+    color: #999;
+    font-size: 16px;
+    padding-right: 16px;
+    &_active {
+      color: $main-color;
+    }
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
 .news {
   display: inline-block;
   max-width: 800px;
   margin-right: 49px;
+}
+.post {
+  height: 143px;
+  clear: both;
+  position: relative;
   &__img {
+    padding-right: 21px;
+    padding-bottom: 20px;
     float: left;
   }
-  &__post {
-    clear: both;
-    position: relative;
+  &__date {
+    font-weight: $fw-text;
+    padding-right: 4px;
+    border-right: 1px solid #999;
+    color: #999;
+    font-size: 13px;
+  }
+  &__categories {
+    font-weight: $fw-text;
+
+    color: #999;
+    font-size: 13px;
+  }
+  &__title {
+    font-weight: $fw-title;
+    padding: 7px 0 5px;
+    font-size: 21px;
+  }
+  &__text {
+    font-weight: $fw-text;
+    font-size: 13px;
+    line-height: 21px;
   }
   &__view {
+    color: #999;
     position: absolute;
     right: 0;
   }
-}
-.tab__item {
-  display: inline-block;
+  &__detail {
+    position: absolute;
+    bottom: 14px;
+    font-weight: $fw-title;
+    color: $main-color;
+  }
 }
 .right-column {
   display: inline-block;
@@ -50,9 +105,40 @@
   vertical-align: top;
 }
 .videos {
+  &__title {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #999;
+    color: $main-color;
+  }
+  &__name {
+    padding-top: 13px;
+    font-size: 16px;
+    font-weight: $fw-title;
+  }
   &__slide {
     max-width: 203px;
     display: inline-block;
+  }
+}
+.banner {
+  width: 427px;
+  height: 128px;
+  position: relative;
+  &__img {
+
+  }
+  &__price{
+
+  }
+  &__title {
+
+  }
+  &__text {
+
+  }
+  &__button {
+
   }
 }
 
