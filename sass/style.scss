@@ -17,21 +17,135 @@ $fw-title: 600;
   position: relative;
   font-family: "Catamaran";
 }
-
 /*
 ================================================================================
 |                                     HEADER                                   |
 ================================================================================
 */
 
+.header {
+  clear: both;
+  text-align: center;
+  height: 480px;
+  background-image: url('../img/prem-min.jpg');
+  -webkit-background-size:cover;
+  -o-background-size:cover;
+  -moz-background-size:cover;
+}
+
+.logo {
+  padding-top: 22px;
+  float: left;
+  text-align: center;
+  color: #fff;
+  &__title {
+    font-size:13px;
+    padding-top: 14px;
+    padding-bottom: 8px;
+  }
+  &__text {
+    font-weight: $fw-title;
+    font-size: 18px;
+    padding-bottom:22px;
+  }
+}
+
+.menu{
+
+  color: #fff;
+  display: inline-block;
+  font-weight: $fw-title;
+  
+  &__item {
+    padding: 22px 15px;
+    display: inline-block;
+    position: relative;
+    &:hover {
+      color: $main-color;
+      text-decoration: underline;
+      cursor: pointer;
+    .menu__submenu {
+      left: -10px;
+    }
+      .menu__triangle {
+        left: 50px;
+      }
+    }
+  }
+  &__triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    margin-top: 5px;
+    left: -9999px;
+  }
+  &__submenu {
+    line-height: 20px;
+    padding: 10px 0 21px;
+    width: 142px;
+    height: 89px;
+    color: #000;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    list-style: none;
+    left:-9999px;
+  }
+  &__subitem {
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+.option {
+  position: absolute;
+  top: 15px;
+  right:0;
+  &__login {
+    vertical-align: middle;
+    padding-right: 38px;
+    color: #fff;
+  }
+}
+.lid {
+  padding-left: 500px;
+  text-align: left;
+  padding-top: 50px;
+  &__active-lid {
+    display: inline-block;
+    color: #fff;
+    span {
+      font-weight: $fw-title;
+      font-size: 26px;
+    }
+  }
+  &__all {
+    border-left: 1px solid $main-color;
+    display: inline-block;
+    color: $main-color;
+    span {
+      font-size:26px;
+      font-weight: $fw-title;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
 /*
 ================================================================================
 |                                     MAIN                                     |
 ================================================================================
 */
+
 .content {
   padding-top: 50px;
 }
+
 .tab {
   padding-bottom: 10px;
   margin-bottom: 15px;
@@ -45,16 +159,18 @@ $fw-title: 600;
     &_active {
       color: $main-color;
     }
-    &:hover {
+    a:hover {
       color: $main-color;
     }
   }
 }
+
 .news {
   display: inline-block;
   max-width: 800px;
   margin-right: 49px;
 }
+
 .post {
   height: 143px;
   clear: both;
@@ -99,11 +215,13 @@ $fw-title: 600;
     color: $main-color;
   }
 }
+
 .right-column {
   display: inline-block;
   max-width: 427px;
   vertical-align: top;
 }
+
 .videos {
   &__title {
     padding-bottom: 10px;
@@ -121,24 +239,202 @@ $fw-title: 600;
     display: inline-block;
   }
 }
+
 .banner {
+  line-height: 21px;
   width: 427px;
-  height: 128px;
+  height: 178px;
+  border: 1px solid #999;
+  margin-top: 59px;
+  margin-bottom: 37px;
   position: relative;
   &__img {
-
+    float: left;
+    padding: 13px 11px 0 22px;
   }
-  &__price{
-
+  &__price {
+    position: absolute;
+    z-index: 9999;
+    top: 58px;
+    left: 22px;
   }
   &__title {
-
+    padding-top: 36px;
+    font-weight: $fw-title;
   }
   &__text {
-
+    font-weight: $fw-text;
+    margin-right: 27px;
   }
   &__button {
+    position: relative;
+    color: #fff;
+    border: 0;
+    border-radius: 16px;
+    border-bottom: 1px solid #000;
+    width: 167px;
+    height: 32px;
+    background: #333;
+    padding-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 29px;
+    &:hover {
+      background: #ef5f1f;
+      &:before {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        z-index: 9999;
+        width: 27px;
+        height: 27px;
+        content: '';
+        background-image: url('../img/basket-active.png');
+      }
+    }
+    &:before {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      z-index: 9999;
+      width: 27px;
+      height: 27px;
+      content: '';
+      background-image: url('../img/basket.png');
+    }
+  }
+}
 
+.association {
+  vertical-align: top;
+  list-style: none;
+  width: 45%;
+  display: inline-block;
+  &__title {
+    color: $main-color;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #999;
+  }
+  &__item {
+    margin-bottom: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.museums {
+  list-style: none;
+  float: right;
+  vertical-align: top;
+  width: 49%;
+  display: inline-block;
+  &__title {
+    color: $main-color;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #999;
+  }
+  &__item {
+    margin-bottom: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sign-up {
+  width: 427px;
+  height: 142px;
+  margin-top: 50px;
+  margin-bottom: 37px;
+  border: 1px solid #999;
+  &__img {
+    float: left;
+    padding: 10px 15px 0 17px;
+  }
+  &__text {
+    padding-top: 30px;
+    font-weight: $fw-title;
+    b {
+      color: $main-color;
+    }
+  }
+  &__button {
+    position: relative;
+    color: #fff;
+    border: 0;
+    border-radius: 16px;
+    border-bottom: 1px solid #000;
+    width: 167px;
+    height: 32px;
+    background: #333;
+    padding-left: 25px;
+    margin-top: 23px;
+    margin-bottom: 22px;
+
+    &:hover {
+      background: $main-color;
+      &:before {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        z-index: 9999;
+        width: 27px;
+        height: 27px;
+        content: '';
+        background-image: url('../img/message-active.png');
+      }
+    }
+    &:before {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      z-index: 9999;
+      width: 27px;
+      height: 27px;
+      content: '';
+      background-image: url('../img/message.png');
+    }
+  }
+}
+
+.documents {
+  vertical-align: top;
+  list-style: none;
+  width: 45%;
+  display: inline-block;
+  &__title {
+    color: $main-color;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #999;
+  }
+  &__item {
+    margin-bottom: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.links {
+  float: right;
+  vertical-align: top;
+  list-style: none;
+  width: 49%;
+  display: inline-block;
+  &__title {
+    color: $main-color;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #999;
+  }
+  &__item {
+    margin-bottom: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -147,3 +443,64 @@ $fw-title: 600;
 |                                     FOOTER                                   |
 ================================================================================
 */
+.footer {
+  background-color: #333;
+  font-weight: $fw-text;
+}
+
+.join-us {
+  height: 80px;
+  background-color: #ccc;
+  text-align: center;
+  &__text {
+    display: inline-block;
+    font-size: 16px;
+  }
+  &__button {
+    color: #fff;
+    border: 0;
+    border-radius: 16px;
+    width: 104px;
+    height: 33px;
+    background: #333;
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #000;
+    &:hover {
+      background: $main-color;
+    }
+  }
+}
+
+.nav {
+  list-style-type: none;
+  margin-top: 37px;
+  margin-bottom: 47px;
+  line-height: 26px;
+  display: inline-block;
+  width: 207px;
+  vertical-align: top;
+  &__title {
+    color: $main-color;
+  }
+  &__links a {
+    color: #ccc;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.devider {
+  max-width: 1280px;
+  width: 100%;
+  border-top: 1px solid #333;
+}
+.copyright {
+  height:39px;
+  color: #ccc;
+  &__link {
+    color: #ccc;
+  }
+}
+

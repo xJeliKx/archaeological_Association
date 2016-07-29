@@ -26,7 +26,7 @@ input[type=submit], input[type=button], button{-webkit-appearance: none; outline
 *:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 .clearfix:after,
 .wrapper:after {
-  content: ".";
+  content: "";
   display: block;
   height: 0;
   clear: both;
