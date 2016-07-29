@@ -119,6 +119,13 @@ input[type=submit], input[type=button], button {
   visibility: hidden;
 }
 
+@font-face {
+  font-family: 'Grands';
+  src: url("../font/Grands.eot");
+  src: url("../font/Grands.eot?#iefix") format("embedded-opentype"), url("../font/Grands.svg#Grands") format("svg"), url("../font/Grands.woff") format("woff"), url("../font/Grands.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*
 ================================================================================
 |                                     MAIN STYLE                               |
@@ -132,6 +139,10 @@ input[type=submit], input[type=button], button {
   font-family: "Catamaran";
 }
 
+.text-center {
+  text-align: center;
+}
+
 /*
 ================================================================================
 |                                     HEADER                                   |
@@ -139,7 +150,6 @@ input[type=submit], input[type=button], button {
 */
 .header {
   clear: both;
-  text-align: center;
   height: 480px;
   background-image: url("../img/prem-min.jpg");
   -webkit-background-size: cover;
@@ -150,7 +160,6 @@ input[type=submit], input[type=button], button {
 .logo {
   padding-top: 22px;
   float: left;
-  text-align: center;
   color: #fff;
 }
 .logo__title {
@@ -168,9 +177,10 @@ input[type=submit], input[type=button], button {
   color: #fff;
   display: inline-block;
   font-weight: 600;
+  padding-left: 163px;
 }
 .menu__item {
-  padding: 22px 15px;
+  padding: 25px 15px;
   display: inline-block;
   position: relative;
 }
@@ -180,10 +190,10 @@ input[type=submit], input[type=button], button {
   cursor: pointer;
 }
 .menu__item:hover .menu__submenu {
-  left: -10px;
+  left: -20px;
 }
 .menu__item:hover .menu__triangle {
-  left: 50px;
+  left: 40px;
 }
 .menu__triangle {
   width: 0;
@@ -192,42 +202,51 @@ input[type=submit], input[type=button], button {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #fff;
   position: absolute;
-  margin-top: 5px;
+  margin-top: 15px;
   left: -9999px;
 }
 .menu__submenu {
-  line-height: 20px;
+  line-height: 22px;
   padding: 10px 0 21px;
   width: 142px;
   height: 89px;
   color: #000;
   background-color: #fff;
   position: absolute;
-  top: 50px;
+  top: 60px;
   list-style: none;
   left: -9999px;
 }
 .menu__subitem:hover {
+  text-decoration: underline;
   color: #11b3eb;
 }
 
 .option {
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 0;
 }
 .option__login {
-  vertical-align: middle;
+  vertical-align: 4px;
   padding-right: 38px;
   color: #fff;
 }
+.option__search:before {
+  display: inline-block;
+  content: '';
+  background-image: url("../img/search.png");
+  width: 17px;
+  height: 17px;
+}
 
 .lid {
-  padding-left: 500px;
-  text-align: left;
-  padding-top: 50px;
+  display: inline-block;
+  padding-left: 316px;
+  padding-top: 40px;
 }
 .lid__active-lid {
+  padding-right: 12px;
   display: inline-block;
   color: #fff;
 }
@@ -236,6 +255,7 @@ input[type=submit], input[type=button], button {
   font-size: 26px;
 }
 .lid__all {
+  padding-left: 11px;
   border-left: 1px solid #11b3eb;
   display: inline-block;
   color: #11b3eb;
@@ -246,6 +266,73 @@ input[type=submit], input[type=button], button {
 }
 .lid__all p {
   font-size: 13px;
+}
+
+.social-icons, .social__facebook:before, .social__google:before, .social__youtube:before {
+  margin-left: 10px;
+  border: 1px solid #fff;
+  border-radius: 17px;
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Grands';
+}
+
+.social {
+  margin-top: 44px;
+  float: right;
+}
+.social__facebook:before {
+  content: "\e021";
+}
+.social__google:before {
+  content: "\e01b";
+}
+.social__youtube:before {
+  content: "\e000";
+}
+
+.premium {
+  position: relative;
+  display: inline-block;
+}
+.premium__news {
+  width: 363px;
+  height: 162px;
+  vertical-align: top;
+  display: inline-block;
+  color: #fff;
+  padding-top: 105px;
+  margin-left: 213px;
+}
+.premium__date {
+  font-size: 13px;
+  color: #11b3eb;
+}
+.premium__text {
+  padding-top: 5px;
+  line-height: 40px;
+  font-size: 31px;
+  font-weight: 600;
+}
+.premium__img {
+  position: absolute;
+  left: 640px;
+  top: 35px;
+}
+.premium__button {
+  color: #fff;
+  border: 0;
+  border-radius: 16px;
+  width: 104px;
+  height: 33px;
+  background: #333;
+  text-align: center;
+  margin-top: 23px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #000;
+}
+.premium__button:hover {
+  background: #11b3eb;
 }
 
 /*
